@@ -1,0 +1,89 @@
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap";
+@import "https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap";
+:root{
+    --color-blue:rgba(227, 187, 235, 0.979);
+    --primary-color: #7159c1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+}
+header{
+    background-color: white;
+    width: 100%;
+    padding: 24px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.links{
+    text-align: center;
+}
+
+.links a{
+    color: #777;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 16px;
+    text-decoration: none;
+    position: relative;
+}
+
+.links a + a{
+    margin-left: 32px;
+}
+
+.links a.active{
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.links a:hover{
+    color: var(--primary-color);
+}
+
+.links a::after{ /* pseudo-elemento */
+    content: ""; /* sempre precisa ter esse content, pode ser vazio */
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+.links a:hover::after{
+    width: 100%;
+    transition: width 500ms ease-in-out;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    height:64px;    
+}
+
+#links-footer{
+    position: relative;
+    top: 3vh;
+}
+/* 
+.links a:hover{
+    color:var(--color-blue);
+    transition: color 700ms;
+} */
+body div a:hover{
+    color:var(--color-blue);
+    transition: color 700ms
+}

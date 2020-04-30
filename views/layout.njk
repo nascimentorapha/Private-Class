@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        
+        <link rel="stylesheet" href="styles.css">
+
+        {% block head %}
+
+            <title>Gym Manager</title>
+            
+        {% endblock %}
+    
+    </head>
+
+<body>
+    <header>
+        <div class="links">
+            <a href="/" class="active">Instructors</a>
+            <a href="/members">Members</a>
+        </div>
+    </header>
+
+
+    {% block content %}
+
+    {% endblock %}
+
+    <div class="footer">
+        <div id="links-footer" class="links">            
+            <a href="https://github.com/nascimentorapha" target="_blank">Github</a>
+            <a href="http://twitter.com/aquele_rapha" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/in/nascimento-rapha" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
