@@ -79,11 +79,7 @@ header{
     position: relative;
     top: 3vh;
 }
-/* 
-.links a:hover{
-    color:var(--color-blue);
-    transition: color 700ms;
-} */
+
 body div a:hover{
     color:var(--color-blue);
     transition: color 700ms
