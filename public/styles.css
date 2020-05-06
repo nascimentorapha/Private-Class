@@ -1,8 +1,9 @@
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap";
 @import "https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap";
 :root{
-    --color-blue:#00185f;
-    --primary-color: rgb(88, 88, 88);
+    --color-orange:#ff8a1d;
+    --primary-color: rgb(26, 26, 26);
+    --color-white: #dfdfdf;
 }
 
 *{
@@ -14,7 +15,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background: var(--primary-color);
-    color: white;
+    color: rgb(75, 75, 75);
     text-decoration: none;
 }
 header{
@@ -44,18 +45,18 @@ header{
 
 .links a.active{
     font-weight: 700;
-    color: var(--color-blue);
+    color: var(--color-orange);
 }
 
 .links a:hover{
-    color: var(--color-blue);
+    color: var(--color-orange);
 }
 
 .links a::after{ /* pseudo-elemento */
     content: ""; /* sempre precisa ter esse content, pode ser vazio */
     width: 0;
     height: 2px;
-    background-color: var(--color-blue);
+    background-color: var(--color-orange);
     position: absolute;
     left: 0;
     bottom: -4px;
@@ -71,17 +72,22 @@ header{
     bottom: 0;
     width:100%;
     background-color: rgba(0, 0, 0, 0.08);
-    height:64px;
-    font-weight: 300;    
+    height:56px;
+    font-weight: 300; 
+    margin-top: 32px;
+    box-sizing: border-box;
+    position: relative;
+  
 }
 
 #links-footer{
     position: relative;
     top: 3vh;
+    color: var(--color-white)
 }
 
 body div a:hover{
-    color:var(--color-blue);
+    color:var(--color-orange);
     transition: color 700ms
 }
 
@@ -96,7 +102,66 @@ body div a:hover{
 .card{
     background-color: white;
     width: 800px;
-    height:400px;
+    min-height:400px;
     margin: 46px auto;
 
+    /* Colunas do card */
+    display: grid;
+    grid-template-columns: 40fr 60fr;
+
+    /* sombra da box */
+    box-shadow: 8px 8px 2px rgba(255, 255, 255, 0.4);
+    
+    /* animação pra iniciar */
+    animation-name: up;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in;
+
+}
+
+@keyframes up{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.details{
+    padding: 32px;
+}
+
+.details h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.details .item{
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 8px 0;
+}
+
+.details .item:first-of-type{
+    border: none;
+}
+
+.details .item div:nth-child(1){
+    color: rgb(141, 141, 141);
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+.details .item span{
+    padding: 8px 16px;
+    background-color: var(--color-orange);
+    border-radius: 16px;
+    color: white;
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block;
+    font-weight: lighter;
+    font-size: 12px;
 }
