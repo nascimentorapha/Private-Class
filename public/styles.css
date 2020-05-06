@@ -90,3 +90,13 @@ body div a:hover{
     text-align: center;
     padding-top: 64px;
 }
+
+/* == CARD == */
+
+.card{
+    background-color: white;
+    width: 800px;
+    height:400px;
+    margin: 46px auto;
+
+}
