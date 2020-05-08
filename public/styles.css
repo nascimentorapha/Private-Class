@@ -151,6 +151,7 @@ body div a:hover{
     color: rgb(141, 141, 141);
     font-size: 14px;
     line-height: 24px;
+    font-weight: bold;
 }
 
 
@@ -164,4 +165,40 @@ body div a:hover{
     display: inline-block;
     font-weight: lighter;
     font-size: 12px;
+}
+
+/* == FORM == */
+
+button[type="submit"]{
+    padding: 8px 32px;
+    background-color: var(--color-orange);
+    border-radius: 8px;
+    margin-top: 16px;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+}
+
+input{
+    width: 100%;
+    outline: none;
+}
+
+input[type="radio"]{
+    width: initial;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.education_level select{
+    background-color: var(--color-orange);
+    color: var(--primary-color);
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+
+.education_level select option{
+    color: var(--color-white);
 }
