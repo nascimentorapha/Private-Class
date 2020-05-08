@@ -14,6 +14,8 @@ routes.get('/teachers/create', function (req, res){
     return res.render("teachers/create")
 })
 
+routes.post("/teachers", teachers.post)
+
 routes.get('/members', function (req, res){
     return res.send("members")
 })
