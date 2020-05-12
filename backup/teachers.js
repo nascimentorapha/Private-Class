@@ -21,11 +21,11 @@ exports.post = function (req, res){
         id,
         name,
         birth,
-        avatar_url,
         education_level,
         class_type,
         classes,
-        created_at,
+        avatar_url,
+        created_at
     }) //push incrementa objeto no array
     
 
@@ -33,7 +33,7 @@ exports.post = function (req, res){
         if (err) //tratamento de erro                           //JSON com os dados do login
             return res.send("Write file error")
 
-        return res.redirect("/teachers")
+        return res.redirect("teachers")
     })
 
 }

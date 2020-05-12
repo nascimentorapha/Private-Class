@@ -190,7 +190,7 @@ input[type="radio"]{
     display: inline-block;
 }
 
-.education_level select{
+.education__level select{
     background-color: var(--color-orange);
     color: var(--primary-color);
     padding: 8px;
@@ -199,6 +199,6 @@ input[type="radio"]{
     font-family: 'Roboto', sans-serif;
 }
 
-.education_level select option{
+.education__level select option{
     color: var(--color-white);
 }
