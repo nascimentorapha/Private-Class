@@ -1,6 +1,15 @@
 {
   "teachers": [
-    {},
+    {
+      "id": 1,
+      "name": "Livia Afonso",
+      "birth": 978307200000,
+      "avatar_url": "http://www.google.com",
+      "education_level": "Ensino Médio Completo",
+      "class_type": "D",
+      "classes": "português",
+      "created_at": 1589390988112
+    },
     {
       "id": 2,
       "name": "Raphael Nascimento",

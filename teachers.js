@@ -1,6 +1,30 @@
 const fs = require('fs') //filesystem
 const data = require('./data.json')
 
+//show
+exports.show = function (req, res){
+    
+    const { id } = req.params
+
+    const foundTeacher = data.teachers.find(function(teacher){
+        return teacher.id == id
+    })
+
+    if (!foundTeacher)
+        return res.send("Teacher not found")
+    
+    const teacher ={
+        ...foundTeacher, //coloca todos os campos do teacher
+        age: "", //corrige esses campos
+        classes: foundTeacher.classes.split(","),
+        created_at: "",
+    }
+
+    return res.render("teachers/show", { teacher })
+}
+
+
+
 //create
 exports.post = function (req, res){
     
