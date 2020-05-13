@@ -1,7 +1,15 @@
 {
-    "teachers": [
-        {
-            
-        }
-    ]
+  "teachers": [
+    {},
+    {
+      "id": 2,
+      "name": "Raphael Nascimento",
+      "birth": 978307200000,
+      "avatar_url": "http://www.google.com",
+      "education_level": "Ensino Superior Completo",
+      "class_type": "D",
+      "classes": "matemática",
+      "created_at": 1589390988112
+    }
+  ]
 }
