@@ -182,6 +182,12 @@ button[type="submit"]{
 input{
     width: 100%;
     outline: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.item>:nth-child(2) {
+    font-weight: 700;
 }
 
 input[type="radio"]{
