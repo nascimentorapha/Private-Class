@@ -1,7 +1,7 @@
 const fs = require('fs') //filesystem
 const Intl = require('intl')
 const data = require('./data.json')
-// const { age, date } = require('./utils')
+const { age, date } = require('./utils')
 
 //show
 exports.show = function (req, res){
@@ -17,9 +17,9 @@ exports.show = function (req, res){
     
     const teacher ={
         ...foundTeacher, //coloca todos os campos do teacher
-        age: "", //corrige esses campos
+        birth: date(foundTeacher.birth), //corrige esses campos
         classes: foundTeacher.classes.split(","),
-        created_at: "",
+        created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at),
     }
 
     return res.render("teachers/show", { teacher })
@@ -75,14 +75,15 @@ exports.edit = function(req, res){
 
     if (!foundTeacher){
         return res.send("Teacher not found") // finaliza a localização
-    } 
-    
+    }
+
     const teacher = {
         ...foundTeacher,
-        birth: date(foundTeacher.birth),
+        birth: age(foundTeacher.birth),
+        created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at),
     }
     
 
 
-    return res.render('teachers/edit', { teacher })
+    return res.render("teachers/edit", { teacher })
 }
