@@ -61,3 +61,26 @@ exports.post = function (req, res){
     })
 
 }
+
+
+//edit
+exports.edit = function(req, res){
+    const { id } = req.params /* "req.params" é o parametro id na rota */
+
+    const foundInstructor = data.instructors.find(function(instructor){
+        return instructor.id == id
+    })
+
+    if (!foundInstructor){
+        return res.send("Instructor not found") // finaliza a localização
+    } 
+    
+    const instructor = {
+        ...foundInstructor,
+        birth: date(foundInstructor.birth),
+    }
+    
+
+
+    return res.render('instructors/edit', { instructor })
+}
