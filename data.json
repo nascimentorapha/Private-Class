@@ -19,6 +19,16 @@
       "class_type": "D",
       "classes": "matemática",
       "created_at": 1589390988112
+    },
+    {
+      "id": 3,
+      "name": "Alex Silva",
+      "birth": 831081600000,
+      "avatar_url": "https://avatars3.githubusercontent.com/u/49926686?s=460&u=05a515233567e0db77e5eeb5298d907dae6d5553&v=4",
+      "education_level": "Ensino Superior Completo",
+      "class_type": "P",
+      "classes": "Matemática, Física",
+      "created_at": 1590000101752
     }
   ]
 }
