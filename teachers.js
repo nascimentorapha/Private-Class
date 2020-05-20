@@ -1,5 +1,7 @@
 const fs = require('fs') //filesystem
+const Intl = require('intl')
 const data = require('./data.json')
+// const { age, date } = require('./utils')
 
 //show
 exports.show = function (req, res){
@@ -67,20 +69,20 @@ exports.post = function (req, res){
 exports.edit = function(req, res){
     const { id } = req.params /* "req.params" é o parametro id na rota */
 
-    const foundInstructor = data.instructors.find(function(instructor){
-        return instructor.id == id
+    const foundTeacher = data.teachers.find(function(teacher){
+        return teacher.id == id
     })
 
-    if (!foundInstructor){
-        return res.send("Instructor not found") // finaliza a localização
+    if (!foundTeacher){
+        return res.send("Teacher not found") // finaliza a localização
     } 
     
-    const instructor = {
-        ...foundInstructor,
-        birth: date(foundInstructor.birth),
+    const teacher = {
+        ...foundTeacher,
+        birth: date(foundTeacher.birth),
     }
     
 
 
-    return res.render('instructors/edit', { instructor })
+    return res.render('teachers/edit', { teacher })
 }
