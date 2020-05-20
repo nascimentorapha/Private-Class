@@ -1,0 +1,33 @@
+<div class="item">
+    <div>Instrutor</div>
+    <div>{{ teacher.name }}</div>
+</div>
+
+<div class="item">
+    <div>Idade</div>
+    <div>{{ teacher.birth }}</div>
+</div>
+
+<div class="item">
+    <div>Sexo</div>
+    <div>{{ "Masculino" if teacher.gender == "M" else "Feminino" }}</div>
+</div>
+
+<div class="item">
+    <div>Acompanhamento</div>
+    <div>
+        {% for class in teacher.classes %}
+
+            <span>{{ class }}</span>
+        
+        {% endfor %}
+
+    </div>
+</div>
+
+<div class="item">
+    <div>Desde</div>
+    <div>{{ teacher.created_at }}</div>
+</div>
+
+<button type="submit">Salvar</button>
