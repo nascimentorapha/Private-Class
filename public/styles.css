@@ -2,7 +2,7 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap";
 :root{
     --color-orange:#ff8a1d;
-    --primary-color: rgb(26, 26, 26);
+    --primary-color: rgb(46, 46, 46);
     --color-white: #dfdfdf;
 }
 
@@ -194,6 +194,31 @@ input[type="radio"]{
     width: initial;
     margin-right: 8px;
     display: inline-block;
+}
+
+a.button{
+    display:block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+}
+
+a.button{
+    padding: 8px 32px;
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 8px 0;
+    border-style: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.button-delete button[type="submit"]{
+    background-color: #c53737;
+    margin-top: 8px;
 }
 
 .education__level select{

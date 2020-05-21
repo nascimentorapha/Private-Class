@@ -3,19 +3,34 @@
 
 {% block content %}
 
-    <form class="card" method="POST" action="/instructors">
-    
-        <section class="avatar" style="opacity: 0.71; background: url(https://source.unsplash.com/collection/8172461/500x500) no-repeat center center / cover">
-        </section>
+<div class="card">
 
-        <section class="details">
-            
-            <h3>Editar Instrutor</h3>
+    <section class="avatar" style="opacity: 0.71; background: url(https://source.unsplash.com/collection/8172461/500x500) no-repeat center center / cover">
+    </section>
+
+    <section class="details">
+
+        <form method="POST" action="/teachers?_method=PUT">
+    
+            <h3>Editar Professor</h3>
 
             {% include 'teachers/fields.njk' %}
 
-        </section>
+            <input 
+                type="hidden" 
+                name="id" 
+                value={{teachers.id}}>
 
-    </form>
+        </form>
+
+        <form class="button-delete" action="/teachers?_method=DELETE" method="post">
+        
+        <input type="hidden" name="id" value={{teachers.id}}>
+        <button type="submit">Deletar</button>
+
+        </form>
+
+    </section>
+</div>
 
 {% endblock content %}
