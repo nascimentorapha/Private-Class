@@ -28,6 +28,15 @@
             </div>
             
             <div class="item">
+                <div>Grau de escolaridade</div>
+                <div class="education__level" style="width:200px;">{{ teacher.education_level }}</div>
+            </div>
+
+            <div class="item">
+                <div>Tipo de aula</div>
+                <div>{{ "À Distância" if teacher.class_type == "D" else "Presencial"}}</div>
+            </div>
+            <div class="item">
                 <div>Acompanhamento</div>
                 <div>
                     {% for class in teacher.classes %}
@@ -43,6 +52,8 @@
                 <div>Desde</div>
                 <div>{{ teacher.created_at }}</div>
             </div>
+
+            <a href="/teachers/{{ teacher.id }}/edit" class="button">Editar</a>
 
         </section>
 
