@@ -87,3 +87,33 @@ exports.edit = function(req, res){
 
     return res.render("teachers/edit", { teacher })
 }
+
+//put | update
+exports.put = function(req,res){
+    const { id } = req.body
+    let index = 0
+
+    const foundTeacher = data.teachers.find(function(teacher){
+        return teacher.id == id
+    })
+
+    if (!foundTeacher){
+        return res.send("Teacher not found") // finaliza a localização
+    }
+
+    const teacher = {
+        ...foundTeacher,
+        ...req.body,
+        birth: Date.parse(birth),
+    }
+
+    data.teachers[index] = teacher
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
+        if (err)
+            return res.send ("Write error!")
+        
+        return res.redirect(`/teachers/${id}`)
+    })
+
+}
