@@ -17,7 +17,7 @@ exports.show = function (req, res){
     
     const teacher ={
         ...foundTeacher, //coloca todos os campos do teacher
-        birth: date(foundTeacher.birth), //corrige esses campos
+        birth: age(foundTeacher.birth), //corrige esses campos
         classes: foundTeacher.classes.split(","),
         created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at),
     }
