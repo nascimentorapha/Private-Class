@@ -37,7 +37,7 @@ exports.post = function (req, res){
             return res.send("Please fill all fields!")
     }
 
-    let {avatar_url, name, birth, education_level, class_type, classes} = req.body //Busca somente informação específica
+    let {avatar_url, name, birth, gender, education_level, class_type, classes} = req.body //Busca somente informação específica
 
     birth = Date.parse(birth) //transforma p/ milissegundo a data
     const created_at = Date.now() //cria a data atual na criação do registro
@@ -47,6 +47,7 @@ exports.post = function (req, res){
         id,
         name,
         birth,
+        gender,
         avatar_url,
         education_level,
         class_type,
