@@ -29,6 +29,37 @@
       "class_type": "P",
       "classes": "Matemática, Física",
       "created_at": 1590000101752
+    },
+    {
+      "id": 4,
+      "name": "Alex Silva",
+      "birth": 1328140800000,
+      "avatar_url": "http://www.google.com",
+      "education_level": "Doutorado",
+      "class_type": "P",
+      "classes": "Geografia",
+      "created_at": 1590173254252
+    },
+    {
+      "id": 5,
+      "name": "Lucas Costa",
+      "birth": 1046649600000,
+      "avatar_url": "https://avatars3.githubusercontent.com/u/49926686?s=460&u=05a515233567e0db77e5eeb5298d907dae6d5553&v=4",
+      "education_level": "Mestrado",
+      "class_type": "P",
+      "classes": "História",
+      "created_at": 1590175926935
+    },
+    {
+      "id": 6,
+      "name": "Ivan Cunha",
+      "birth": 920419200000,
+      "gender": "M",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/49926686?s=460&u=05a515233567e0db77e5eeb5298d907dae6d5553&v=4",
+      "education_level": "Mestrado",
+      "class_type": "D",
+      "classes": "Química",
+      "created_at": 1590176003086
     }
   ]
 }
