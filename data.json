@@ -4,6 +4,7 @@
       "id": 1,
       "name": "Livia Afonso",
       "birth": 978307200000,
+      "gender": "F",
       "avatar_url": "http://www.google.com",
       "education_level": "Ensino Médio Completo",
       "class_type": "D",
@@ -14,6 +15,7 @@
       "id": 2,
       "name": "Raphael Nascimento",
       "birth": 978307200000,
+      "gender": "M",
       "avatar_url": "http://www.google.com",
       "education_level": "Ensino Superior Completo",
       "class_type": "D",
@@ -24,6 +26,7 @@
       "id": 3,
       "name": "Alex Silva",
       "birth": 831081600000,
+      "gender": "M",
       "avatar_url": "https://avatars3.githubusercontent.com/u/49926686?s=460&u=05a515233567e0db77e5eeb5298d907dae6d5553&v=4",
       "education_level": "Ensino Superior Completo",
       "class_type": "P",
@@ -34,6 +37,7 @@
       "id": 4,
       "name": "Alex Silva",
       "birth": 1328140800000,
+      "gender": "M",
       "avatar_url": "http://www.google.com",
       "education_level": "Doutorado",
       "class_type": "P",
@@ -44,6 +48,7 @@
       "id": 5,
       "name": "Lucas Costa",
       "birth": 1046649600000,
+      "gender": "M",
       "avatar_url": "https://avatars3.githubusercontent.com/u/49926686?s=460&u=05a515233567e0db77e5eeb5298d907dae6d5553&v=4",
       "education_level": "Mestrado",
       "class_type": "P",
@@ -60,6 +65,28 @@
       "class_type": "D",
       "classes": "Química",
       "created_at": 1590176003086
+    },
+    {
+      "id": 7,
+      "name": "Livia Afonso",
+      "birth": 978307200000,
+      "gender": "F",
+      "avatar_url": "http://www.google.com",
+      "education_level": "Ensino Médio Completo",
+      "class_type": "D",
+      "classes": "portuguêss",
+      "created_at": 1590513740090
+    },
+    {
+      "id": 8,
+      "name": "Livia Afonso",
+      "birth": 978307200000,
+      "gender": "F",
+      "avatar_url": "http://www.google.com",
+      "education_level": "Ensino Médio Completo",
+      "class_type": "D",
+      "classes": "portuguêsss",
+      "created_at": 1590514870505
     }
   ]
 }
