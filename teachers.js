@@ -25,8 +25,6 @@ exports.show = function (req, res){
     return res.render("teachers/show", { teacher })
 }
 
-
-
 //create
 exports.post = function (req, res){
     
@@ -65,7 +63,6 @@ exports.post = function (req, res){
 
 }
 
-
 //edit
 exports.edit = function(req, res){
     const { id } = req.params /* "req.params" é o parametro id na rota */
@@ -84,18 +81,19 @@ exports.edit = function(req, res){
         created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at),
     }
     
-
-    console.log( { teacher } )
     return res.render("teachers/edit", { teacher })
 }
 
 //put | update
-exports.put = function(req,res){
+exports.put = function(req, res){
     const { id } = req.body
     let index = 0
 
-    const foundTeacher = data.teachers.find(function(teacher){
-        return teacher.id == id
+    const foundTeacher = data.teachers.find(function(teacher, foundIndex){
+        if (id == teacher.id){
+            index = foundIndex
+            return true
+        }
     })
 
     if (!foundTeacher){
@@ -105,7 +103,7 @@ exports.put = function(req,res){
     const teacher = {
         ...foundTeacher,
         ...req.body,
-        birth: Date.parse(birth),
+        birth: Date.parse(req.body.birth)
     }
 
     data.teachers[index] = teacher
@@ -115,6 +113,25 @@ exports.put = function(req,res){
             return res.send ("Write error!")
         
         return res.redirect(`/teachers/${id}`)
+    })
+
+}
+
+//delete
+exports.delete = function(req, res){
+    const { id } = req.body
+
+    const filteredTeachers = data.teachers.filter(function(teacher){
+        return teacher.id != id
+    })
+
+    data.teachers = filteredTeachers
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
+        if(err)
+            return res.send("Write file error")
+        
+        return res.redirect("/teachers")
     })
 
 }
