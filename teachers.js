@@ -80,12 +80,12 @@ exports.edit = function(req, res){
 
     const teacher = {
         ...foundTeacher,
-        birth: age(foundTeacher.birth),
+        birth: date(foundTeacher.birth),
         created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at),
     }
     
 
-
+    console.log( { teacher } )
     return res.render("teachers/edit", { teacher })
 }
 
