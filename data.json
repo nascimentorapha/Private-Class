@@ -1,11 +1,11 @@
 {
   "teachers": [
     {
-      "id": 1,
-      "name": "Livia Afonso",
+      "id": "1",
+      "name": "Livia Afonsoooo",
       "birth": 978307200000,
-      "gender": "F",
-      "avatar_url": "http://www.google.com",
+      "gender": "M",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/49926686?s=460&u=05a515233567e0db77e5eeb5298d907dae6d5553&v=4",
       "education_level": "Ensino Médio Completo",
       "class_type": "D",
       "classes": "português",
@@ -45,17 +45,6 @@
       "created_at": 1590173254252
     },
     {
-      "id": 5,
-      "name": "Lucas Costa",
-      "birth": 1046649600000,
-      "gender": "M",
-      "avatar_url": "https://avatars3.githubusercontent.com/u/49926686?s=460&u=05a515233567e0db77e5eeb5298d907dae6d5553&v=4",
-      "education_level": "Mestrado",
-      "class_type": "P",
-      "classes": "História",
-      "created_at": 1590175926935
-    },
-    {
       "id": 6,
       "name": "Ivan Cunha",
       "birth": 920419200000,
@@ -65,28 +54,6 @@
       "class_type": "D",
       "classes": "Química",
       "created_at": 1590176003086
-    },
-    {
-      "id": 7,
-      "name": "Livia Afonso",
-      "birth": 978307200000,
-      "gender": "F",
-      "avatar_url": "http://www.google.com",
-      "education_level": "Ensino Médio Completo",
-      "class_type": "D",
-      "classes": "portuguêss",
-      "created_at": 1590513740090
-    },
-    {
-      "id": 8,
-      "name": "Livia Afonso",
-      "birth": 978307200000,
-      "gender": "F",
-      "avatar_url": "http://www.google.com",
-      "education_level": "Ensino Médio Completo",
-      "class_type": "D",
-      "classes": "portuguêsss",
-      "created_at": 1590514870505
     }
   ]
 }
