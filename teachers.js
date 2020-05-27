@@ -79,6 +79,7 @@ exports.edit = function(req, res){
         ...foundTeacher,
         birth: date(foundTeacher.birth),
         created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at),
+        id: Number(foundTeacher.id)
     }
     
     return res.render("teachers/edit", { teacher })
@@ -107,6 +108,8 @@ exports.put = function(req, res){
     }
 
     data.teachers[index] = teacher
+
+    console.log(req.body.id)
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
         if (err)
