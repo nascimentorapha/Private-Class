@@ -11,8 +11,8 @@ server.use(express.urlencoded({ extended:true}))
 //comando "req.body"
 
 server.use(express.static('public'))
-server.use(routes)
 server.use(methodOverride('_method'))
+server.use(routes)
 
 server.set("view engine", "njk")
 
