@@ -233,3 +233,63 @@ a.button{
 .education__level select option{
     color: var(--color-white);
 }
+
+.table-container{
+    display: block;
+    box-sizing: border-box;
+    padding: 32px;
+}
+
+.table-container table{
+    border-spacing: 0;
+}
+
+.table-container thead{
+    background-color: var(--color-orange);
+    opacity: 0.8;
+    color: whitesmoke;
+    border-radius: 8px;
+}
+
+.table-container tbody td, th {
+    padding: 16px;
+    border-bottom: 1px solid #d9d9d9;
+
+}
+
+.table-container tbody tr:last-child td{
+    border-bottom: none;
+
+} 
+
+.table-container tbody tr:hover{
+    background-color: #f5f5f5;
+}
+
+.table-container tbody tr td:first-child{
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    padding-right: 16px;
+}
+
+.table-container tbody tr td span{
+    height: 40px;
+    width: 40px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 3px 1px 6px -4px black;
+    border: 2px solid white;
+}
+
+.table-container tbody tr td:last-child a{
+    background-color: var(--color-orange);
+    padding: 8px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    border-radius: 8px;
+    font-weight: 700;
+}
