@@ -1,0 +1,97 @@
+<div class="item">
+    <div>Avatar URL</div>
+    <div>
+        <input 
+            type="url"
+            name="avatar_url"
+            placeholder="http://"
+            value="{{ student.avatar_url }}"
+        >
+    </div>
+</div>
+<div class="item">
+    <div>Nome completo</div>
+    <div>
+        <input 
+            type="text"
+            name="name"
+            placeholder="Marcos da Silva"
+            value = "{{ student.name }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Data de Nascimento</div>
+    <div>  
+        <input 
+            type="date"
+            name="birth"
+            value = "{{ student.birth }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Sexo</div>
+    <div>
+    <span>
+        <input type="radio" name="gender" value="M"
+            {% if student.gender == "M"%}
+                checked
+            {% endif %} >Masculino
+        </span>
+        <span>
+            <input type="radio" name="gender" value="F"
+            {% if student.gender == "F"%}
+                checked
+            {% endif %}    
+            >Feminino
+        </span>
+    </div>
+</div>
+
+<div class="item">
+    <div>Grau de escolaridade</div>
+    <div class="education__level" style="width:200px;">
+        <select name="education_level">
+            <option value="Ensino Médio Completo" {% if student.education_level == "Ensino Médio Completo"%} selected {% endif %} >Ensino Médio Completo</option>
+            <option value="Ensino Superior Completo" {% if student.education_level == "Ensino Superior Completo"%} selected {% endif %} >Ensino Superior Completo</option>
+            <option value="Mestrado" {% if student.education_level == "Mestrado"%} selected {% endif %} >Mestrado</option>
+            <option value="Doutorado" {% if student.education_level == "Doutorado"%} selected {% endif %}>Doutorado</option>
+        </select>
+    </div>
+</div>
+
+<div class="item">
+    <div>Tipo de aula</div>
+    <div>
+        <span><input type="radio" name="class_type" value="P" 
+            {% if student.class_type == "P"%}
+                checked
+            {% endif %} >Presencial</span>
+        <span><input type="radio" name="class_type" value="D" 
+            {% if student.class_type == "D"%}
+                checked
+            {% endif %} >À Distância</span>
+    </div>
+</div>
+
+<div class="item">
+    <div>Matérias que leciona</div>
+    <div>
+        <input 
+        type="text" 
+        name="classes"
+        placeholder="Separe os serviços prestados por vírgula"
+        value="{{student.classes}}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Desde</div>
+    <div>{{ student.created_at }}</div>
+</div>
+
+<button type="submit">Salvar</button>

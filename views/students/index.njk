@@ -1,0 +1,36 @@
+{% extends "layout.njk" %}
+
+
+{% block content %}
+
+    <div class="card table-container">
+    
+        <table width=100%>
+        
+            <thead>
+                <tr>
+                    <th>Aluno</th>
+                    <th>Tipo de Aula</th>
+                    <th>Acompanhamento</th>
+                    <th width="24px"></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for student in students %}
+                <tr>
+                    <td> <span style="background: url({{student.avatar_url}}) no-repeat center center / cover"></span>
+                    {{student.name}}</td>
+                    <td>{{ "À Distância" if student.class_type == "D" else "Presencial"}}</td>
+                    <td>{{student.classes}}</td>
+                    <td><a href="/students/{{student.id}}">Ver</a></td>
+                </tr>
+
+                {% endfor %}
+            </tbody>
+
+        </table>
+
+    </div>
+
+{% endblock content %}
