@@ -30,6 +30,11 @@ exports.show = function (req, res){
     return res.render("students/show", { student })
 }
 
+//new
+exports.create = function (req, res){
+    return res.render('students/create')
+}
+
 //create
 exports.post = function (req, res){
     
