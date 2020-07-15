@@ -18,6 +18,7 @@ routes.delete('/teachers', teachers.delete)
 
 
 routes.get('/students', students.index)
+routes.get('/students/create', students.create)
 
 
 routes.use(function(req, res) {
