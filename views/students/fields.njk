@@ -22,6 +22,18 @@
 </div>
 
 <div class="item">
+    <div>E-mail</div>
+    <div>
+        <input 
+        type="email" 
+        name="email"
+        placeholder="joao@usp.edu.br"
+        value = "{{ student.email }}"
+        >
+    </div>
+</div>
+
+<div class="item">
     <div>Data de Nascimento</div>
     <div>  
         <input 
@@ -52,46 +64,25 @@
 </div>
 
 <div class="item">
-    <div>Grau de escolaridade</div>
-    <div class="education__level" style="width:200px;">
-        <select name="education_level">
-            <option value="Ensino Médio Completo" {% if student.education_level == "Ensino Médio Completo"%} selected {% endif %} >Ensino Médio Completo</option>
-            <option value="Ensino Superior Completo" {% if student.education_level == "Ensino Superior Completo"%} selected {% endif %} >Ensino Superior Completo</option>
-            <option value="Mestrado" {% if student.education_level == "Mestrado"%} selected {% endif %} >Mestrado</option>
-            <option value="Doutorado" {% if student.education_level == "Doutorado"%} selected {% endif %}>Doutorado</option>
+    <div>Ano escolar</div>
+    <div class="school__year" style="width:200px;">
+        <select name="school_year">
+            <option value="5-fundamental" {% if student.school_year == "5-fundamental"%} selected {% endif %} >5º ano Fundamental</option>
+            <option value="6-fundamental" {% if student.school_year == "6-fundamental"%} selected {% endif %} >6º ano Fundamental</option>
+            <option value="7-fundamental" {% if student.school_year == "7-fundamental"%} selected {% endif %} >7º ano Fundamental</option>
+            <option value="8-fundamental" {% if student.school_year == "8-fundamental"%} selected {% endif %} >8º ano Fundamental</option>
+            <option value="1-medio" {% if student.school_year == "1-medio"%} selected {% endif %} >1º ano Médio</option>
+            <option value="2-medio" {% if student.school_year == "2-medio"%} selected {% endif %} >2º ano Médio</option>
+            <option value="3-medio" {% if student.school_year == "3-medio"%} selected {% endif %} >3º ano Médio</option>
         </select>
     </div>
 </div>
 
 <div class="item">
-    <div>Tipo de aula</div>
-    <div>
-        <span><input type="radio" name="class_type" value="P" 
-            {% if student.class_type == "P"%}
-                checked
-            {% endif %} >Presencial</span>
-        <span><input type="radio" name="class_type" value="D" 
-            {% if student.class_type == "D"%}
-                checked
-            {% endif %} >À Distância</span>
+    <div>Carga horária (semanal)</div>
+    <div class="hours-week" style="width:100px;">
+        <input type="number" name="">
     </div>
-</div>
-
-<div class="item">
-    <div>Matérias que leciona</div>
-    <div>
-        <input 
-        type="text" 
-        name="classes"
-        placeholder="Separe os serviços prestados por vírgula"
-        value="{{student.classes}}"
-        >
-    </div>
-</div>
-
-<div class="item">
-    <div>Desde</div>
-    <div>{{ student.created_at }}</div>
 </div>
 
 <button type="submit">Salvar</button>
