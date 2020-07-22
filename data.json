@@ -56,7 +56,16 @@
       "created_at": 1590176003086
     }
   ],
-  "students":[
-    
+  "students": [
+    {
+      "id": "1",
+      "name": "Leticia Silva",
+      "birth": 883699200000,
+      "email": "leticia@usf.edu.com",
+      "gender": "F",
+      "avatar_url": "https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "school_year": "1-medio",
+      "created_at": 1595436550264
+    }
   ]
 }
