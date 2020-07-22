@@ -23,7 +23,6 @@ exports.show = function (req, res){
     const student ={
         ...foundStudent, //coloca todos os campos do student
         birth: age(foundStudent.birth), //corrige esses campos
-        classes: foundStudent.classes.split(","),
         created_at: new Intl.DateTimeFormat('pt-BR').format(foundStudent.created_at),
     }
 
@@ -45,7 +44,7 @@ exports.post = function (req, res){
             return res.send("Please fill all fields!")
     }
 
-    let {avatar_url, name, birth, gender, education_level, class_type, classes} = req.body //Busca somente informação específica
+    let {avatar_url, name, birth, email, gender, school_year, hours_week} = req.body //Busca somente informação específica
 
     birth = Date.parse(birth) //transforma p/ milissegundo a data
     const created_at = Date.now() //cria a data atual na criação do registro
@@ -55,11 +54,11 @@ exports.post = function (req, res){
         id,
         name,
         birth,
+        email,
         gender,
         avatar_url,
-        education_level,
-        class_type,
-        classes,
+        school_year,
+        hours_week,
         created_at,
     }) //push incrementa objeto no array
     
