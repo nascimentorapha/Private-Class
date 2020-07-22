@@ -167,6 +167,14 @@ body div a:hover{
     font-size: 12px;
 }
 
+.details .hours-week{
+    color: black;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: bold;
+
+}
+
 /* == FORM == */
 
 button[type="submit"]{
